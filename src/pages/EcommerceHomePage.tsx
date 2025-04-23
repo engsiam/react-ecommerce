@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import AppNavigation from "../components/AppNavigation";
 interface AdminStats {
   totalSales: number;
   totalOrders: number;
@@ -1315,76 +1316,7 @@ const EcommerceHomePage: React.FC = () => {
         </div>
       </div>
       {/* Tab Bar */}
-      <div className="bg-white/90 backdrop-blur-sm shadow-lg fixed bottom-0 w-full grid grid-cols-4 py-4 border-t border-gray-100">
-        <button
-          className={`flex flex-col items-center justify-center cursor-pointer ${
-            currentTab === "home" ? "text-[#9641C1]" : "text-gray-400"
-          }`}
-          onClick={() => setCurrentTab("home")}
-        >
-          <div
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-              currentTab === "home"
-                ? "bg-[#9641C1]/10"
-                : "bg-gradient-to-br from-white to-gray-100"
-            } shadow-lg transform transition-all duration-200 hover:scale-110`}
-          >
-            <i className="fas fa-home text-2xl"></i>
-          </div>
-          <span className="text-[10px] mt-2 font-medium">Home</span>
-        </button>
-        <button
-          className={`flex flex-col items-center justify-center cursor-pointer ${
-            currentTab === "categories" ? "text-[#9641C1]" : "text-gray-500"
-          }`}
-          onClick={() => setCurrentTab("categories")}
-        >
-          <div
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-              currentTab === "categories"
-                ? "bg-[#9641C1]/10"
-                : "bg-gradient-to-br from-white to-gray-100"
-            } shadow-lg transform transition-all duration-200 hover:scale-110`}
-          >
-            <i className="fas fa-th-large text-2xl"></i>
-          </div>
-          <span className="text-[10px] mt-2 font-medium">Categories</span>
-        </button>
-        <button
-          className={`flex flex-col items-center justify-center cursor-pointer ${
-            currentTab === "cart" ? "text-[#9641C1]" : "text-gray-500"
-          }`}
-          onClick={() => setCurrentTab("cart")}
-        >
-          <div
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-              currentTab === "cart"
-                ? "bg-[#9641C1]/10"
-                : "bg-gradient-to-br from-white to-gray-100"
-            } shadow-lg transform transition-all duration-200 hover:scale-110`}
-          >
-            <i className="fas fa-shopping-cart text-2xl"></i>
-          </div>
-          <span className="text-[10px] mt-2 font-medium">Cart</span>
-        </button>
-        <button
-          className={`flex flex-col items-center justify-center cursor-pointer ${
-            currentTab === "profile" ? "text-[#9641C1]" : "text-gray-500"
-          }`}
-          onClick={() => setCurrentTab("profile")}
-        >
-          <div
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-              currentTab === "profile"
-                ? "bg-[#9641C1]/10"
-                : "bg-gradient-to-br from-white to-gray-100"
-            } shadow-lg transform transition-all duration-200 hover:scale-110`}
-          >
-            <i className="fas fa-user text-2xl"></i>
-          </div>
-          <span className="text-[10px] mt-2 font-medium">Profile</span>
-        </button>
-      </div>
+      <AppNavigation />
     </div>
   );
 };

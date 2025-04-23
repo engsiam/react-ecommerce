@@ -13,9 +13,9 @@ import UserProfileManagement from "./pages/UserProfileManagement";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<AllFlashDeals />} />
+      <Route path="/" element={<EcommerceHomePage />} />
+      <Route path="/flash" element={<AllFlashDeals />} />
       <Route path="/category" element={<AllProductCategories />} />
-      <Route path="/home" element={<EcommerceHomePage />} />
       <Route path="/checkout" element={<HeadphonesCheckoutPage />} />
       <Route path="/cart" element={<ShoppingCartPage />} />
       <Route path="/profile" element={<UserProfileManagement />} />

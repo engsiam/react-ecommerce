@@ -145,7 +145,7 @@ const AllProductCategories: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Navigation Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 fixed top-0 w-full z-10 shadow-sm">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 fixed top-0 w-full shadow-sm z-40">
         <div className="flex items-center justify-between px-4 py-3">
           <BackButton />
           <h1 className="text-lg font-semibold bg-gradient-to-r from-indigo-200 to-purple-200 bg-clip-text text-transparent">

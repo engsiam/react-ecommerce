@@ -11,7 +11,7 @@ const AppNavigation = () => {
   ];
 
   return (
-    <div className="bg-white shadow-lg fixed bottom-0 w-full grid grid-cols-4 py-3 border-t border-gray-100">
+    <div className="bg-white shadow-lg fixed bottom-0 w-full grid grid-cols-4 py-3 border-t border-gray-100 z-40">
       {navItems.map(({path, label, icon}) => (
         <Link
           to={path}
