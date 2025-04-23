@@ -1,7 +1,10 @@
 
 import React, { useEffect, useState } from "react";
 import AppNavigation from "../components/AppNavigation";
+import BackButton from "../components/BakcButtob";
 const AllFlashDeals: React.FC = () => {
+ 
+
   const [activeFilter, setActiveFilter] = useState("All");
   const [activePriceFilter, setActivePriceFilter] = useState("All");
   const [activeSort, setActiveSort] = useState("Popular");
@@ -250,13 +253,7 @@ const AllFlashDeals: React.FC = () => {
       {/* Navigation Header */}
       <div className="fixed top-0 w-full z-10 bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="flex items-center justify-between px-4 py-3">
-          <a
-            href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/cad49841-4c52-43e3-86b2-1b95c6704abc"
-            data-readdy="true"
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer"
-          >
-            <i className="fas fa-arrow-left text-gray-700"></i>
-          </a>
+        <BackButton/>
           <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
             Flash Deals
           </h1>

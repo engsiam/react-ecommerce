@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import AppNavigation from "../components/AppNavigation";
+import BackButton from "../components/BakcButtob";
 const HeadphonesCheckoutPage: React.FC = () => {
   const [selectedShipping, setSelectedShipping] = useState<string>("standard");
   const [selectedPayment, setSelectedPayment] = useState<string>("credit");
@@ -101,13 +102,7 @@ const HeadphonesCheckoutPage: React.FC = () => {
     >
       {/* Navigation Bar */}
       <div className="fixed top-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 px-4 py-3 flex items-center justify-between">
-        <a
-          href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/9ff06d5e-601a-4dc0-b491-801a1ecc154f"
-          data-readdy="true"
-          className="flex items-center cursor-pointer"
-        >
-          <i className="fas fa-arrow-left text-gray-700"></i>
-        </a>
+        <BackButton />
         <h1 className="text-base font-medium text-center flex-1 truncate mx-2">
           Checkout
         </h1>

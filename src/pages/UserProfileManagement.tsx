@@ -1,6 +1,7 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useState } from "react";
 import AppNavigation from "../components/AppNavigation";
+import BackButton from "../components/BakcButtob";
 const UserProfileManagement: React.FC = () => {
   // User profile data
   const [userData] = useState({
@@ -169,13 +170,7 @@ const UserProfileManagement: React.FC = () => {
       {/* Header */}
       <div className="bg-white fixed top-0 w-full z-10 shadow-sm">
         <div className="flex items-center justify-between px-4 py-3">
-          <a
-            href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/959e5ddc-1083-4313-92b1-d4e7bdf2a84a"
-            data-readdy="true"
-            className="flex items-center cursor-pointer text-gray-700"
-          >
-            <i className="fas fa-arrow-left"></i>
-          </a>
+          <BackButton />
           <h1 className="text-lg font-semibold text-gray-800">My Profile</h1>
           <button className="text-purple-600 cursor-pointer">
             <i className="fas fa-cog"></i>

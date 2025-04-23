@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import AppNavigation from "../components/AppNavigation.js";
+import BackButton from "../components/BakcButtob.js";
 
 const AllProductCategories: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -146,13 +147,7 @@ const AllProductCategories: React.FC = () => {
       {/* Navigation Bar */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 fixed top-0 w-full z-10 shadow-sm">
         <div className="flex items-center justify-between px-4 py-3">
-          <a
-            href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/cad49841-4c52-43e3-86b2-1b95c6704abc"
-            data-readdy="true"
-            className="flex items-center cursor-pointer"
-          >
-            <i className="fas fa-arrow-left text-white"></i>
-          </a>
+          <BackButton />
           <h1 className="text-lg font-semibold bg-gradient-to-r from-indigo-200 to-purple-200 bg-clip-text text-transparent">
             All Categories
           </h1>
