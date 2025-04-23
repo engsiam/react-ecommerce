@@ -282,7 +282,7 @@ const AdminPanel: React.FC = () => {
   );
 };
 const EcommerceHomePage: React.FC = () => {
-  const [currentTab, setCurrentTab] = useState("home");
+  // const [currentTab, setCurrentTab] = useState("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   // Close dropdown when clicking outside
