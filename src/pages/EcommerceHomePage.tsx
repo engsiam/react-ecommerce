@@ -1,11 +1,11 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AppNavigation from "../components/AppNavigation";
-import { Link } from "react-router-dom";
 interface AdminStats {
   totalSales: number;
   totalOrders: number;
@@ -499,7 +499,7 @@ const EcommerceHomePage: React.FC = () => {
       <div className="bg-white/90 backdrop-blur-sm fixed top-0 w-full z-10 shadow-sm">
         <div className="flex items-center justify-between p-4">
           <h1 className="text-xl font-semibold text-gray-800">Welcome</h1>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <div className="relative">
               <i className="fas fa-shopping-cart text-gray-700"></i>
               <span className="absolute -top-1 -right-2 bg-indigo-600 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
@@ -764,9 +764,9 @@ const EcommerceHomePage: React.FC = () => {
           </div>
           <div className="mt-2 px-4">
             <Link to="/checkout">
-            <div className="grid grid-cols-2 gap-3">
-              {featuredProducts.map((product) => renderProductCard(product))}
-            </div>
+              <div className="grid grid-cols-2 gap-3">
+                {featuredProducts.map((product) => renderProductCard(product))}
+              </div>
             </Link>
           </div>
         </div>
