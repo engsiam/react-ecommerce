@@ -469,18 +469,18 @@ const EcommerceHomePage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-3 flex items-center justify-between">
+        <div className="mt-3 flex items-center justify-between gap-2">
           <div>
-            <p className="text-base font-semibold text-gray-900">
+            <p className="text-xs font-semibold text-gray-900">
               ${product.price.toFixed(2)}
             </p>
             <p className="text-xs text-gray-500 line-through">
               ${(product.price * 1.2).toFixed(2)}
             </p>
           </div>
-          <button className="h-9 px-4 bg-[#9641C1] hover:bg-[#8537AB] text-white rounded-full flex items-center justify-center gap-2 transition-colors duration-300 group">
-            <i className="fas fa-shopping-cart text-sm"></i>
-            <span className="text-sm font-medium">Add</span>
+          <button className="h-6 px-2.5 bg-[#9641C1] hover:bg-[#8537AB] text-white rounded-full flex items-center justify-center gap-2 transition-colors duration-300 group">
+            <i className="fas fa-shopping-cart text-xs"></i>
+            <span className="text-xs font-medium">Add</span>
           </button>
         </div>
       </div>
@@ -765,7 +765,7 @@ const EcommerceHomePage: React.FC = () => {
             </button>
           </div>
           <div className="mt-2 px-4">
-            <Link to="/checkout">
+            <Link to="/Productsdetails">
               <div className="grid grid-cols-2 gap-3">
                 {featuredProducts.map((product) => renderProductCard(product))}
               </div>

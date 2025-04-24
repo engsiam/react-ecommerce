@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import AppNavigation from "../components/AppNavigation";
+import { Link } from "react-router-dom";
 const ShoppingCartPage: React.FC = () => {
   // Cart items state
   const [cartItems, setCartItems] = useState<
@@ -395,9 +396,11 @@ const ShoppingCartPage: React.FC = () => {
       {/* Checkout Button (Fixed at bottom) */}
       {!isLoading && cartItems.length > 0 && (
         <div className="fixed bottom-16 left-0 right-0 bg-white border-t border-gray-100 p-4 shadow-lg">
-          <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300 !rounded-button">
+          <Link to="/checkout">
+          <button  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300 !rounded-button cursor-pointer">
             Proceed to Checkout
           </button>
+          </Link>
         </div>
       )}
       {/* Bottom Tab Bar */}

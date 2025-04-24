@@ -1,7 +1,8 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
+
 import React, { useState } from "react";
+import BakcButtob from "../components/BakcButtob";
 import { Link } from "react-router-dom";
-const App: React.FC = () => {
+const PremiumWirelessHeadphonesDetails: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState("Matte Black");
   const [quantity, setQuantity] = useState(1);
@@ -134,13 +135,7 @@ const App: React.FC = () => {
     >
       {/* Navigation Bar */}
       <div className="fixed top-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 px-4 py-3 flex items-center justify-between">
-        <a
-          href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/cad49841-4c52-43e3-86b2-1b95c6704abc"
-          data-readdy="true"
-          className="flex items-center cursor-pointer"
-        >
-          <i className="fas fa-arrow-left text-gray-700"></i>
-        </a>
+        <BakcButtob/>
         <h1 className="text-base font-medium text-center flex-1 truncate mx-2">
           Premium Wireless Headphones
         </h1>
@@ -148,12 +143,14 @@ const App: React.FC = () => {
           <i className="fas fa-share-alt text-gray-700 cursor-pointer"></i>
           <i className="far fa-heart text-gray-700 cursor-pointer"></i>
           <div className="relative">
+            <Link to="/cart">
             <i className="fas fa-shopping-cart text-gray-700 cursor-pointer"></i>
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                 {cartCount}
               </span>
             )}
+            </Link>
           </div>
         </div>
       </div>
@@ -161,7 +158,7 @@ const App: React.FC = () => {
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg z-50 animate-slide-down">
           <div className="flex items-start">
             <div className="flex-1">
-              <p className="font-medium">Added to Cart! asda</p>
+              <p className="font-medium">Added to Cart!</p>
               <p className="text-sm mt-1">
                 {toastMessage.productName} - {toastMessage.color} (Qty:{" "}
                 {toastMessage.quantity})
@@ -174,11 +171,7 @@ const App: React.FC = () => {
               <i className="fas fa-times"></i>
             </button>
           </div>
-          <Link to="/cart">
-            <button className="text-sm underline mt-2 cursor-pointer">
-              View Cart
-            </button>
-          </Link>
+          <button className="text-sm underline mt-2">View Cart</button>
         </div>
       )}
       {/* Main Content */}
@@ -669,7 +662,7 @@ const App: React.FC = () => {
         </div>
       </div>
       {/* Custom Styles */}
-      <style jsx>{`
+      <style>{`
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -700,4 +693,4 @@ const App: React.FC = () => {
     </div>
   );
 };
-export default App;
+export default PremiumWirelessHeadphonesDetails;

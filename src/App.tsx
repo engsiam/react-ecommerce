@@ -8,6 +8,7 @@ import EcommerceHomePage from "./pages/EcommerceHomePage";
 import HeadphonesCheckoutPage from "./pages/HeadphonesCheckoutPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import UserProfileManagement from "./pages/UserProfileManagement";
+import PremiumWirelessHeadphonesDetails from "./pages/PremiumWirelessHeadphonesDetails";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<EcommerceHomePage />} />
       <Route path="/flash" element={<AllFlashDeals />} />
+      <Route path="/Productsdetails" element={<PremiumWirelessHeadphonesDetails />} />
       <Route path="/category" element={<AllProductCategories />} />
       <Route path="/checkout" element={<HeadphonesCheckoutPage />} />
       <Route path="/cart" element={<ShoppingCartPage />} />
