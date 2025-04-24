@@ -1,8 +1,11 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useEffect, useState } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AppNavigation from "../components/AppNavigation";
+import { Link } from "react-router-dom";
 interface AdminStats {
   totalSales: number;
   totalOrders: number;
@@ -579,14 +582,14 @@ const EcommerceHomePage: React.FC = () => {
             <h2 className="text-[17px] font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent tracking-tight">
               Categories
             </h2>
-            <a
-              href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/0de34f35-1b6a-421e-96f8-dc0e418f74db"
+            <Link
+              to="/category"
               data-readdy="true"
               className="text-xs text-gray-500 flex items-center"
             >
               View All
               <i className="fas fa-chevron-right ml-1 text-xs"></i>
-            </a>
+            </Link>
           </div>
           <div className="mt-2 px-4 overflow-x-auto">
             <div className="flex space-x-4 py-2">
@@ -760,9 +763,11 @@ const EcommerceHomePage: React.FC = () => {
             </button>
           </div>
           <div className="mt-2 px-4">
+            <Link to="/checkout">
             <div className="grid grid-cols-2 gap-3">
               {featuredProducts.map((product) => renderProductCard(product))}
             </div>
+            </Link>
           </div>
         </div>
         {/* New Arrivals */}
@@ -898,13 +903,13 @@ const EcommerceHomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <a
-                  href="https://readdy.ai/home/b79e29f1-1f47-4bb0-bee4-af561efbbbd4/5e853303-8fbe-4793-900d-ab854361401c"
+                <Link
+                  to="/flash"
                   data-readdy="true"
                   className="text-sm text-indigo-600 font-medium hover:text-indigo-700 transition-colors duration-200"
                 >
                   View All
-                </a>
+                </Link>
               </div>
               <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
                 {[
